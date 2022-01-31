@@ -1,0 +1,16 @@
+{% extends 'base_market.html' %}
+
+{% block content %} 
+<div class="container mt-2" style="text-align: left;">
+    <div class="container" align=left>
+        <img src="{{ Product.image.url }}" class="card-img-top" alt=""
+            style="width: 250px; height: 250px; margin-right: 10px;" align=left>
+    </div>
+    <div class="container ml-5">
+        <h2>{{ Product.name }}</h2>
+        <p style="text-indent: 25px;">{{ Product.desc }}</p>
+        <p>{{ Product.price }} RUB</p>
+        <a href="/" class="btn btn-primary">Add to bash</a>
+    </div>
+</div>
+{% endblock %}

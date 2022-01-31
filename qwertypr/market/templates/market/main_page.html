@@ -1,0 +1,18 @@
+{% extends 'base_market.html' %}
+
+{% block content %}
+    {% for item in Products %}
+    <div class="col-md-2">
+        <div class="card" style="text-align: center;">
+            <img src="{{ item.image.url }}" class="card-img-top mt-3" alt=""
+                style="width: 250px; height: 250px; align-self: center;">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.price }} RUB</p>
+                <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Read more...</a>
+                <a href="/" class="btn btn-primary">Add to bash</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
